@@ -2,7 +2,7 @@ import React from 'react';
 import { createRoot } from 'react-dom/client';
 import WindowFrame from '@renderer/window/WindowFrame';
 import Application from '@components/Application';
-import MonacoEditor from '@components/MonacoEditor'
+import MonacoEditor from '@components/monaco/MonacoEditor'
 // Say something
 console.log('[ERWT] : Renderer execution started');
 

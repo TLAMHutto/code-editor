@@ -1,0 +1,105 @@
+@import '~@fortawesome/fontawesome-free/css/all.min.css';
+
+/* src/monaco/LeftSidebar.scss */
+.left-sidebar {
+    background: #212121;
+    border-right: 1px solid #e5e5e5;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    height: 100%;
+    left: 0;
+    width: 60px;
+    overflow: hidden;
+    transition: width .05s linear;
+    transform: translateZ(0) scale(1, 1);
+    z-index: 1000;
+  
+    &.expanded {
+      width: 250px;
+      overflow: visible;
+    }
+  
+    > ul {
+      margin: 7px 0;
+      list-style: none;
+      padding: 0;
+    }
+  
+    li {
+      position: relative;
+      display: block;
+      width: 250px;
+    }
+  
+    li > a {
+      position: relative;
+      display: table;
+      border-collapse: collapse;
+      border-spacing: 0;
+      color: #999;
+      font-family: Arial, sans-serif;
+      font-size: 14px;
+      text-decoration: none;
+      transition: all .1s linear;
+      transform: translateZ(0) scale(1, 1);
+    }
+  
+    .nav-icon {
+      position: relative;
+      display: table-cell;
+      width: 60px;
+      height: 36px;
+      text-align: center;
+      vertical-align: middle;
+      font-size: 18px;
+    }
+  
+    .nav-text {
+      position: relative;
+      display: table-cell;
+      vertical-align: middle;
+      width: 190px;
+      font-family: 'Titillium Web', sans-serif;
+    }
+  
+    > ul.logout {
+      position: absolute;
+      left: 0;
+      bottom: 0;
+    }
+  
+    a:hover,
+    a:focus {
+      text-decoration: none;
+      color: #fff;
+      background-color: #000000;
+    }
+  
+    nav {
+      user-select: none;
+    }
+  
+    nav ul,
+    nav li {
+      outline: 0;
+      margin: 0;
+      padding: 0;
+    }
+  
+    .scrollable.hover {
+      overflow-y: hidden;
+      &:hover {
+        overflow-y: auto;
+        overflow: visible;
+      }
+    }
+  }
+  
+  .area {
+    float: left;
+    background: #e2e2e2;
+    width: 100%;
+    height: 100%;
+  }
+  

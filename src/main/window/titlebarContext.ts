@@ -13,6 +13,16 @@
 import { ipcRenderer } from 'electron';
 
 const titlebarContext = {
+  setDir() {
+    ipcRenderer.invoke('set-directory').then((folderPath) => {
+      if (folderPath) {
+        console.log('Selected directory:', folderPath);
+        // Handle the folder path, e.g., update state or UI
+      }
+    }).catch((error) => {
+      console.error('Error selecting directory:', error);
+    });
+  },
   exit() {
     ipcRenderer.invoke('window-close');
   },

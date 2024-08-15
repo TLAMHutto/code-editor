@@ -1,0 +1,32 @@
+/* src/renderer/MonacoEditor.scss */
+.monaco-editor-container {
+    height: 100vh;
+    width: 100vw;
+    background-color: transparent; /* Make container background transparent */
+    overflow: hidden; /* Prevent scrollbars within the editor */
+  }
+  
+  .monaco-editor {
+    background-color: transparent !important; /* Ensure editor background is transparent */
+  }
+  
+  .monaco-editor .view-lines {
+    background-color: transparent !important; /* Ensure view-lines background is transparent */
+  }
+  
+  .monaco-editor .margin {
+    background-color: transparent !important; /* Ensure margin (gutter) background is transparent */
+  }
+  
+  .monaco-editor .minimap {
+    background-color: transparent !important; /* Ensure minimap background is transparent */
+  }
+  
+  .monaco-editor .monaco-scrollable-element {
+    background-color: transparent !important; /* Ensure scrollable area background is transparent */
+  }
+//   .monaco-editor.no-user-select .lines-content, .monaco-editor.no-user-select .view-line, .monaco-editor.no-user-select .view-lines{
+//     background-color: rgba(165, 165, 165, 0.39);
+//     filter: blur(10px);
+//   }
+/* src/monaco/LeftSidebar.scss */

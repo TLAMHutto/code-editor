@@ -10,9 +10,17 @@
  * @package : Titlebar IPC (Main Process)
  */
 
-import { BrowserWindow, ipcMain, shell } from 'electron';
+import { BrowserWindow, ipcMain, shell, dialog } from 'electron';
 
 export const registerTitlebarIpc = (mainWindow: BrowserWindow) => {
+
+  ipcMain.handle('set-directory', async () => {
+    const result = await dialog.showOpenDialog(mainWindow, {
+      properties: ['openDirectory'],
+    });
+    return result.filePaths[0]; // Return the selected folder path
+  });
+  
   ipcMain.handle('window-minimize', () => {
     mainWindow.minimize();
   });
@@ -72,7 +80,7 @@ export const registerTitlebarIpc = (mainWindow: BrowserWindow) => {
   ipcMain.handle('web-toggle-devtools', () => {
     mainWindow.webContents.toggleDevTools();
   });
-
+  
   ipcMain.handle('web-actual-size', () => {
     mainWindow.webContents.setZoomLevel(0);
   });

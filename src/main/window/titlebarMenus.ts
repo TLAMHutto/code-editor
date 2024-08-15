@@ -34,6 +34,15 @@ const titlebarMenus: TitlebarMenu[] = [
     ],
   },
   {
+    name: 'Project',
+    items: [
+      {
+        name: 'Set Directory',
+        action: 'setDir',
+      },
+    ]
+  },
+  {
     name: 'Edit',
     items: [
       {
